@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            stylesheets="@style.css"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="soulsyncproject.MainController"
+            prefWidth="400" prefHeight="650"
+            style="-fx-background-color: #ffffff;">
+
+    <!-- Background Image -->
+    <ImageView fx:id="backgroundImage"
+               fitWidth="400" fitHeight="650"
+               preserveRatio="false"
+               style="-fx-opacity: 100;" />
+
+
+    <!-- Mood Buttons -->
+    <HBox fx:id="moodButtons"
+          spacing="10"
+          AnchorPane.leftAnchor="20"
+          AnchorPane.rightAnchor="20"
+          AnchorPane.bottomAnchor="135"
+          alignment="CENTER_LEFT"
+          translateX="10"
+          style="-fx-background-color: transparent;">
+        <Button text="Happy" onAction="#handleMoodClick" styleClass="mood-button"/>
+        <Button text="Sad" onAction="#handleMoodClick" styleClass="mood-button"/>
+        <Button text="Angry" onAction="#handleMoodClick" styleClass="mood-button"/>
+        <Button text="Calm" onAction="#handleMoodClick" styleClass="mood-button"/>
+    </HBox>
+
+
+    <HBox fx:id="inputContainer"
+          AnchorPane.leftAnchor="20"
+          AnchorPane.rightAnchor="20"
+          AnchorPane.bottomAnchor="70"
+          spacing="10"
+          alignment="CENTER_LEFT">
+
+        <!-- Text Input Field -->
+        <TextField fx:id="userInput"
+                   prefWidth="450"
+                   promptText="What are you feeling today?"
+                   onMouseClicked="#openChatScreen"
+                   AnchorPane.leftAnchor="20"
+                   AnchorPane.bottomAnchor="80"
+                   style="
+               -fx-background-radius: 20;
+-fx-background-insets: 0;
+-fx-background-color: rgba(255, 255, 255, 0.15); /* light transparent white */
+-fx-border-color: rgba(255, 255, 255, 0.5);
+-fx-border-width: 1;
+-fx-border-radius: 20;
+-fx-effect: dropshadow(gaussian, rgba(110, 32, 219, 0.5), 6, 0.5, 0, 0);
+-fx-prompt-text-fill: rgba(255, 255, 255, 0.5);
+-fx-font-size: 13px;
+-fx-text-fill: rgba(255, 255, 255, 0.5);
+-fx-padding: 14 16;" 
+        />
+
+
+    </HBox>
+
+    <!-- Bottom Navigation Bar Container -->
+    <AnchorPane fx:id="navBarContainer"
+                prefHeight="80"
+                AnchorPane.bottomAnchor="0"
+                AnchorPane.leftAnchor="0"
+                AnchorPane.rightAnchor="0"
+                style="-fx-background-color: transparent;">
+
+        <!-- NavBar HBox -->
+        <HBox fx:id="navBar"
+              alignment="CENTER"
+              spacing="35"
+              prefHeight="50"
+              AnchorPane.leftAnchor="0"
+              AnchorPane.rightAnchor="0"
+              AnchorPane.bottomAnchor="0"
+              style="-fx-background-color: white; -fx-padding: 10 20 10 20; -fx-effect: dropshadow(gaussian, #ccc, 10, 0.3, 0, 1);">
+        
+            <!-- Navigation Buttons -->
+            <Button fx:id="quoteButton" onAction="#onNavClick" userData="0" style="-fx-background-color: transparent; -fx-cursor: hand;">
+                <graphic>
+                    <ImageView fx:id="quoteIcon" fitWidth="25" fitHeight="25">
+                        <Image url="@icons/quote.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button fx:id="btnMusic" onAction="#onNavClick" userData="1" style="-fx-background-color: transparent; -fx-cursor: hand;">
+                <graphic>
+                    <ImageView fx:id="musicIcon" fitWidth="25" fitHeight="25">
+                        <Image url="@icons/music.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button fx:id="btnChat" onAction="#onNavClick" userData="2" style="-fx-background-color: transparent; -fx-cursor: hand;">
+                <graphic>
+                    <ImageView fx:id="chatIcon" fitWidth="25" fitHeight="25">
+                        <Image url="@icons/chat.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button fx:id="btnTheme" onAction="#onNavClick" userData="3" style="-fx-background-color: transparent; -fx-cursor: hand;">
+                <graphic>
+                    <ImageView fx:id="themeIcon" fitWidth="25" fitHeight="25">
+                        <Image url="@icons/paint-roller.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button fx:id="btnUser" onAction="#onNavClick" userData="4" style="-fx-background-color: transparent; -fx-cursor: hand;">
+                <graphic>
+                    <ImageView fx:id="userIcon" fitWidth="25" fitHeight="25">
+                        <Image url="@icons/user.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+        </HBox>
+    </AnchorPane>
+
+</AnchorPane>

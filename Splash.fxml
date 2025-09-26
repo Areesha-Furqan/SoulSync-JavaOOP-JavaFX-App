@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane fx:id="rootPane"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="soulsyncproject.SplashController"
+            prefWidth="400" prefHeight="700"
+            style="-fx-background-color: linear-gradient(to bottom, #89f7fe, #66a6ff);"
+            opacity="0.0">
+
+    <StackPane prefWidth="400" prefHeight="700">
+        <VBox alignment="CENTER" spacing="20.0">
+            <!-- Title Label -->
+            <Label fx:id="titleLabel" text="SoulSync"
+                   style="-fx-font-size: 36px; -fx-text-fill: #333; -fx-font-weight: bold;"
+                   opacity="0.0" />
+
+            <!-- Subtitle Label -->
+            <Label fx:id="subtitleLabel" text="Calm your soul ✨"
+                   style="-fx-text-fill: white; -fx-font-size: 18px;"
+                   opacity="0.0" />
+        </VBox>
+    </StackPane>
+
+</AnchorPane>

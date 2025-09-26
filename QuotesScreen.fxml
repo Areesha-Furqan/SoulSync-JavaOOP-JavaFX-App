@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            xmlns="http://javafx.com/javafx"
+            fx:controller="soulsyncproject.QuotesController"
+            prefWidth="400" prefHeight="650"
+            stylesheets="@style.css">
+
+    <!-- Gradient Background -->
+    <AnchorPane style="-fx-background-color: linear-gradient(to bottom right, #d4a5ff, #fce4ec); ">
+
+        <!-- ScrollPane to hold quote cards -->
+        <ScrollPane fx:id="scrollPane"
+                    fitToWidth="true"
+                    hbarPolicy="NEVER"
+                    vbarPolicy="AS_NEEDED"
+                    prefWidth="400" prefHeight="650"
+                    AnchorPane.topAnchor="0" 
+                    AnchorPane.bottomAnchor="80"
+                    style="-fx-background-color: linear-gradient(to bottom right, #d4a5ff, #fce4ec); ">
+
+            <!-- VBox to hold quote cards dynamically -->
+            <VBox fx:id="quoteContainer"
+                  spacing="20"
+                  alignment="CENTER"
+                  style="-fx-padding: 20;"
+                  maxWidth="Infinity" />
+        </ScrollPane>
+    </AnchorPane>
+    
+    <!-- Bottom Navigation Bar Container -->
+    <AnchorPane fx:id="navBarContainer"
+                prefHeight="80"
+                AnchorPane.bottomAnchor="0"
+                AnchorPane.leftAnchor="0"
+                AnchorPane.rightAnchor="0"
+                style="-fx-background-color: transparent;">
+
+        <HBox fx:id="navBar"
+              alignment="CENTER"
+              spacing="35"
+              prefHeight="60"
+              AnchorPane.leftAnchor="0"
+              AnchorPane.rightAnchor="0"
+              AnchorPane.bottomAnchor="50"
+              style="-fx-background-color: white; -fx-padding: 10 20 10 20; -fx-effect: dropshadow(gaussian, #ccc, 10, 0.3, 0, 1);">
+
+            <!-- Navigation Buttons -->
+            <Button fx:id="quoteButton" onAction="#onNavClick" userData="0" style="-fx-background-color: transparent; -fx-cursor: hand;">
+                <graphic>
+                    <ImageView fx:id="quoteIcon" fitWidth="25" fitHeight="25">
+                        <Image url="@icons/quote.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button fx:id="btnMusic" onAction="#onNavClick" userData="1" style="-fx-background-color: transparent; -fx-cursor: hand;">
+                <graphic>
+                    <ImageView fx:id="musicIcon" fitWidth="25" fitHeight="25">
+                        <Image url="@icons/music.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button fx:id="btnChat" onAction="#onNavClick" userData="2" style="-fx-background-color: transparent; -fx-cursor: hand;">
+                <graphic>
+                    <ImageView fx:id="chatIcon" fitWidth="28" fitHeight="28">
+                        <Image url="@icons/chat.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button fx:id="btnTheme" onAction="#onNavClick" userData="3" style="-fx-background-color: transparent; -fx-cursor: hand;">
+                <graphic>
+                    <ImageView fx:id="themeIcon" fitWidth="25" fitHeight="25">
+                        <Image url="@icons/paint-roller.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button fx:id="btnUser" onAction="#onNavClick" userData="4" style="-fx-background-color: transparent; -fx-cursor: hand;">
+                <graphic>
+                    <ImageView fx:id="userIcon" fitWidth="25" fitHeight="25">
+                        <Image url="@icons/user.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+        </HBox>
+    </AnchorPane>
+</AnchorPane>
