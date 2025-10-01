@@ -34,7 +34,7 @@ Before running this project, make sure you have:
 
 1. Clone or download this repository.  
    ```bash
-   git clone https://github.com/YourUsername/YourRepoName.git
+   git clone [https://github.com/Areesha-Furqan/SoulSync-JavaOOP-JavaFX-App/edit/main/README.md]
 2. Open NetBeans IDE 23.
 3. Create a new JavaFX project in NetBeans (Java with Ant).
 4. Copy the .java, .fxml, and .css files from this repo into the respective folders of your NetBeans project (FOLLOW THE EXACT ORDER BELOW) :
